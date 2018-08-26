@@ -1,0 +1,40 @@
+<!--index.wxml-->
+<view class="container">
+  <view   class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="info_list">
+    <block  wx:if="{{userinfos.username}}" >
+        <button  class="weui_cell">
+            <view class="weui_cell_hd"><image src="../../images/activity.png"></image></view>
+            <view class="weui_cell_bd">
+                <view class="weui_cell_bd_p" >会员已绑定</view>
+            </view>
+          </button>
+    </block>
+    <block wx:else>
+        <button  class="weui_cell" bindtap='setInfos' >
+            <view class="weui_cell_hd"><image src="../../images/activity.png"></image></view>
+            <view class="weui_cell_bd">
+                <view class="weui_cell_bd_p" >会员绑定</view>
+            </view>
+          </button>
+    </block>
+    <block >
+     <view id="uinfo">
+     <view class='uinfos'>
+        <text>会员名称：</text><text>{{userinfos.username}}</text></view>
+        <view class='uinfos'>
+        <text>会员类别：</text><text>{{userinfos.usergenre}}</text></view>
+        <view class='uinfos'>
+        <text>起始日期：</text><text>{{userinfos.starttime}}</text></view>
+        <view class='uinfos'>
+        <text>截止日期：</text><text>{{userinfos.endtime}}</text></view>
+        <view class='uinfos' style='color:red'>如需解绑请联系书馆管理员</view>
+     </view>
+        
+    </block>
+    <button type="primary" open-type='getUserInfo'bindgetuserinfo="onGotUserInfo"  >微信登陆</button>
+  </view>
+</view>

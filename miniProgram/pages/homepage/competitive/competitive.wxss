@@ -1,0 +1,30 @@
+.list-item{
+  height: 700rpx;
+}
+.list-item-image{
+  display: flex;
+  flex-direction: row;
+  height: 400rpx;
+  width: 90%;
+  margin: 40rpx; 
+  position: relative;
+
+}
+.list-item-a{
+    border: 1px solid lightgrey;
+}
+.list-item-image-itm{
+ height: 100%;
+  width: 100%;
+}
+.list-item-text{
+  height: 250rpx;
+  width: 96%;
+  padding-left:2%;
+  padding-right: 2%; 
+}
+.list-item-text-content{
+  font-size: 12px;
+  color: #999;
+  margin-top: 20rpx;
+}

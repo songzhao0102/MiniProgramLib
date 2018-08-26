@@ -1,0 +1,53 @@
+<view class="container">
+  <view class="nav_left">
+    <block>
+      <view class="nav_left_items  {{curNav == 0 ? 'active' : ''}}" bindtap="switchRightTab" data-index='0' data-id='0' data-value='手绘读物'>手绘读物</view>
+    </block>
+    <block >
+      <view class="nav_left_items  {{curNav == 1 ? 'active' : ''}}" bindtap="switchRightTab" data-index='1' data-id='1' data-value='亲子读物'>亲子读物</view>
+    </block>
+    <block >
+      <view class="nav_left_items {{curNav == 2 ? 'active' : ''}}" bindtap="switchRightTab" data-index="2" data-id="2" data-value='名家作品'>名家作品</view>
+    </block>
+    <block>
+      <view class="nav_left_items {{curNav == 3 ? 'active' : ''}}" bindtap="switchRightTab" data-index="3" data-id="3" data-value='社科类'>社科类</view>
+    </block>
+    <block >
+      <view class="nav_left_items {{curNav == 4 ? 'active' : ''}}" bindtap="switchRightTab" data-index="4" data-id="4" data-value='学生读物'>学生读物</view>
+    </block>
+    <block >
+      <view class="nav_left_items {{curNav == 5 ? 'active' : ''}}" bindtap="switchRightTaba" data-index="5" data-id="5" data-value='0-3'>0-3</view>
+    </block>
+    <block >
+      <view class="nav_left_items {{curNav == 6 ? 'active' : ''}}" bindtap="switchRightTaba" data-index="6" data-id="6" data-value='3-5'>3-5</view>
+    </block>
+    <block >
+      <view class="nav_left_items {{curNav == 7 ? 'active' : ''}}" bindtap="switchRightTaba" data-index="7" data-id="7" data-value='5-7'>5-7</view>
+    </block>
+    <block >
+      <view class="nav_left_items {{curNav == 8 ? 'active' : ''}}" bindtap="switchRightTaba" data-index="8" data-id="8" data-value='7-18'>7-18</view>
+    </block>
+    <block >
+      <view class="nav_left_items {{curNav == 9 ? 'active' : ''}}" bindtap="switchRightTaba" data-index="9" data-id="9" data-value='成人'>成人</view>
+    </block>
+  </view>
+  <view class="nav_right">
+    <view wx:if="{{navRightItems}}">
+      <block wx:for="{{navRightItems}}">
+        <view class="nav_right_items">
+          <view>
+              <block  wx:if="{{item.picurl}}">
+                <image src="http://{{item.picurl}}"></image>
+                <view class='content'>{{item.discription}}</view>
+              </block>
+              <block wx:else>
+                <image src="http://temp.im/50x30"></image>
+                <text>"暂无简介</text>
+              </block>
+              </view>
+        </view>
+      </block>
+    </view>
+    <view wx:else>暂无数据</view>
+  </view>
+</view>

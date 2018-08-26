@@ -1,0 +1,4 @@
+/* pages/my/setInfo/infos.wxss */
+#innum{
+  height: 200rpx;
+}

@@ -1,0 +1,9 @@
+<view class='container'>
+   <view class="voice-all" wx:for="{{list}}">
+   <block>
+       <view class="voice">
+            <audio  name="{{item.name}}" author="{{item.author}}" src="http://{{item.voiceurl}}" id="myAudio" controls loop></audio> 
+       </view>
+    </block>
+    </view>   
+</view>

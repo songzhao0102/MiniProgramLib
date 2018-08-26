@@ -1,0 +1,4 @@
+<view class="section">
+  <input type='number' id='innum' placeholder="请输入会员电话号码进行绑定" bindinput='bindKeyInput' auto-focus/>
+</view>
+<button bindtap="sendMsg">确认</button>

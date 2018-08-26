@@ -1,0 +1,16 @@
+<view class="shuangzix">
+  <view class="list-item">
+  <block wx:for="{{list}}">
+      <view class='list-item-a'>
+        <view class="list-item-image">
+        <image src="http://{{item.picurl}}"class="list-item-image-itm"></image>
+      </view>
+      <view class="list-item-text">
+         <view class="list-item-text-title">{{item.name}}</view>
+         <view class="list-item-text-content">{{item.discription}}</view>
+      </view>
+      </view>
+      </block>
+  </view>
+
+</view>
